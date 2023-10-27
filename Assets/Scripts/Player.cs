@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InputManager.Init(this);
         
     }
 
@@ -19,6 +20,6 @@ public class Player : MonoBehaviour
 
     public void MoveToMiami()
     {
-        transform.position = new Vector3(0, 0, 0);
+        _board.MovePlayerToMiami();
     }
 }
