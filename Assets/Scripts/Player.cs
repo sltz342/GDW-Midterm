@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private bool movedToMiamiAlready = false;
     [SerializeField] public BoardScript _board;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,17 @@ public class Player : MonoBehaviour
 
     public void MoveToMiami()
     {
-        _board.MovePlayerToMiami();
+        if (!movedToMiamiAlready)
+        {
+            movedToMiamiAlready = true;
+            _board.MovePlayer("Miami");
+        }
+        else
+        {
+            _board.MovePlayer("");
+        }
+        
+        
+        
     }
 }

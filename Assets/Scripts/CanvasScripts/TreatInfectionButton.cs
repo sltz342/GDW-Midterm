@@ -11,6 +11,10 @@ public class TreatInfectionButton : MonoBehaviour
     public void TreatInfectionClicked()
     {
         _board.TreatInfection(_player.transform.position);
+    }
+
+    public void SpawnInfectionClicked()
+    {
         _board.spawnNewDiseases();
     }
 }

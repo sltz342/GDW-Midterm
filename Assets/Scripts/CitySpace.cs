@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class CitySpace : MonoBehaviour
 {
-    private static int maxDiseaseCubes = 3;
     private int diseaseCubesOnCity = 0;
-    private List<GameObject> thisCityDisease;
     
     // Start is called before the first frame update
     void Start()
@@ -36,8 +34,7 @@ public class CitySpace : MonoBehaviour
         {
             Destroy(transform.GetChild(0).gameObject);
             diseaseCubesOnCity--;
-        }
-        else
+        } else
         {
             Debug.Log("NO DISEASES TO TREAT");
         }
